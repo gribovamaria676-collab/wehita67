@@ -180,14 +180,14 @@ if (form) {
 
 const cookieBox = document.getElementById("cookie");
 if (cookieBox && !localStorage.getItem("mg_cookie")) cookieBox.hidden = false;
-document.getElementById("cookie-on")?.addEventListener("click", () => {
-  localStorage.setItem("mg_cookie", "all");
+const hideCookie = (mode) => {
+  if (!cookieBox) return;
+  localStorage.setItem("mg_cookie", mode);
   cookieBox.hidden = true;
-});
-document.getElementById("cookie-off")?.addEventListener("click", () => {
-  localStorage.setItem("mg_cookie", "needed");
-  cookieBox.hidden = true;
-});
+  cookieBox.style.display = "none";
+};
+document.getElementById("cookie-on")?.addEventListener("click", () => hideCookie("all"));
+document.getElementById("cookie-off")?.addEventListener("click", () => hideCookie("needed"));
 
 const pauseMedia = (exceptVideo) => {
   document.querySelectorAll("video").forEach((other) => {
