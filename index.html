@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
   <style>
     .contact .ghost,
     .contact a.ghost {
@@ -17,6 +17,7 @@
       border-color: #ff4c12 !important;
       font-weight: 600;
     }
+    .contact-only { grid-template-columns: 1fr !important; }
     .cookie[hidden] { display: none !important; }
     .cookie .cta,
     #cookie-on {
@@ -24,9 +25,23 @@
       color: #111 !important;
       border-color: #ff4c12 !important;
     }
+    .stats, .stats b, .stats span { color: #111 !important; }
     @media (max-width: 900px) {
-      .stats, .stats b { color: #111 !important; }
-      .stats span { color: #3a3a3a !important; }
+      .stats { position: relative; z-index: 3; }
+      .stats, .stats b, .stats span { color: #111 !important; }
+      .hero-art {
+        position: relative !important;
+        inset: auto !important;
+        height: 280px !important;
+        margin: 12px 0 0 !important;
+        overflow: visible !important;
+      }
+      .hero-art .rib {
+        object-fit: contain !important;
+        object-position: center bottom !important;
+        width: 100% !important;
+        height: 280px !important;
+      }
     }
   </style>
 </head>
@@ -119,9 +134,9 @@
         <a class="hero-btn" href="#work">смотреть кейсы <span>↗</span></a>
       </div>
       <aside class="stats">
-        <div><b>4+</b><span>лет<br>в маркетинге</span></div>
-        <div><b>7</b><span>ниш</span></div>
-        <div><b>5</b><span>форматов</span></div>
+        <div><b style="color:#111">4+</b><span style="color:#111">лет<br>в маркетинге</span></div>
+        <div><b style="color:#111">7</b><span style="color:#111">ниш</span></div>
+        <div><b style="color:#111">5</b><span style="color:#111">форматов</span></div>
       </aside>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -409,8 +424,8 @@
   <section class="contact" id="contact">
     <div class="contact-grid contact-only">
       <div>
-        <h2>контакты</h2>
-        <p>Пишите на почту, в Telegram или звоните.</p>
+        <h2>Связаться со мной</h2>
+        <p>Почта, Telegram и телефон.</p>
         <div class="row">
           <a class="ghost" href="mailto:m9ribova@yandex.ru" style="background:#ff4c12;color:#111;border-color:#ff4c12">m9ribova@yandex.ru</a>
           <a class="ghost" href="https://t.me/wehita" target="_blank" rel="noopener" style="background:#ff4c12;color:#111;border-color:#ff4c12">telegram @wehita</a>
